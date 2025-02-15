@@ -14,6 +14,16 @@ working_dir = os.path.dirname(os.path.abspath(__file__))
 diabetes_model_path = os.path.join(working_dir, '../models/diabetes_model.sav')
 heart_model_path = os.path.join(working_dir, '../models/heart_model.sav')
 parkin_model_path = os.path.join(working_dir, '../models/parkin_model.sav')
+# Load the models
+with open(diabetes_model_path, 'rb') as file:
+    diabetes_model = pickle.load(file)
+
+with open(heart_model_path, 'rb') as file:
+    heart_model = pickle.load(file)
+
+with open(parkin_model_path, 'rb') as file:
+    parkin_model = pickle.load(file)
+
 #sidebar for navigation
 with st.sidebar:
 
